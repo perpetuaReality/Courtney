@@ -1,0 +1,230 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Courtney || Command list</title>
+    <meta name="description" content="Courtney! An HP tracker bot for Discord. Keep track of your character's HP easily on your next D&D session!">
+    <link id="favicon" rel="icon" href="https://cdn.glitch.com/6c33b7d1-845a-40b8-a161-aa91ea03b579%2FICON.png?1538727260231" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  </head>
+  <body>
+  <div id="navbar">
+    <a href="/"><img src="https://cdn.glitch.com/6c33b7d1-845a-40b8-a161-aa91ea03b579%2FICON.png?1538727260231" class="icon" height="50" width="50"/><h2>Courtney</h2></a>
+    <div id="toggleBtn"><a href="javascript:void(0);" onclick="toggleMenu();"><span class="fas fa-bars" ></span></a></div>
+    <div id="menu">
+      <a href="/about">About</a>
+      <a href="/quickstart">Quickstart</a>
+      <a href="/commands">Commands</a>
+      <a href="/invite">Invite!</a>
+    </div>
+  </div>
+	<div class="title">
+    <h1>Command list</h1><h2>and common parameters</h2>
+	</div>
+	<div class="cont_wrap">
+		<div class="content">
+			If a command requires a parameter (also called variables or arguments), it will most likely be one of these:
+			<table>
+				<tr>
+					<td><code>[CHARACTER]</code></td>
+					<td>The name of a character. These have to be <i>shorter than 32 characters</i> and are <i>case-insensitive</i>. If you want to use spaces, surround this parameter by single quotes. (Ex. <code>'Lengthily Named Character'</code>)</td>
+				</tr>
+				<tr>
+					<td><code>[MAX HP]</code></td>
+					<td>The maximum HP of a character. These have to be <i>positive integers smaller than 50 million</i>.</td>
+				</tr>
+				<tr>
+					<td><code>[NEW HP]</code></td>
+					<td>The new current HP of a character, if you want to edit it directly. Can be positive or negative (or zero), but has to be <i>between positive and negative 50 million</i>.</td>
+				</tr>
+				<tr>
+					<td><code>[CHANGE]</code><br/><code>[DAMAGE]</code><br/><code>[HEALING]</code></td>
+					<td>A change to the HP of a character. These can be positive or negative (or zero), but have to be <i>between positive and negative 1 million</i>.</td>
+				</tr>
+			</table>
+			<h3>Command list</h3>
+			<b><i>Note:</i></b> Remember to not include the square brackets (<code>[]</code>) when typing something. The whole thing wrapped in <code>[]</code> should be replaced by whatever arguments you desire. 
+			<table>
+				<thead> 
+					<td>Command</td>
+					<td>Description</td>
+					<td>Examples</td>
+					<td>Aliases</td>
+				</thead>
+				<tbody>
+					<tr>
+						<td><code>c!help [COMMAND]</code></td>
+						<td><i>Gives help about how to use Courtney and her commands.</i><br/>
+							If the optional <code>[COMMAND]</code> paramater is not present, lists all commands.</td>
+						<td><code>c!help</code><br/>
+							<code>c!help&nbsp;summon</code></td>
+						<td><code>c!listCommands</code><br/>
+							<code>c!commands</code></td>
+					</tr>
+					<tr>
+						<td><code>c!new [CHARACTER] [MAX HP]</code></td>
+            <td><i>Register a new character into the roster.</i> If there is already a character with that name on the Roster, throws an error.<br/></td>
+						<td><code>c!new&nbsp;Courtney&nbsp;20</code><br/>
+							<code>c!new&nbsp;'The&nbsp;Chosen&nbsp;One'&nbsp;10000</code></td>
+						<td><code>c!newCharacter</code><br/>
+							<code>c!newChara</code><br/>
+							<code>c!add</code><br/>
+							<code>c!addCharacter</code><br/>
+							<code>c!addChara</code></td>
+					</tr>
+					<tr>
+						<td><code>c!summon [CHARACTER]</code></td>
+            <td><i>Summons a character from the Roster into the active Party.</i> If the character isn't on the Roster, or was already summoned, throws an error.<br/></td>
+						<td><code>c!summon&nbsp;Courtney</code><br/>
+							<code>c!summon&nbsp;'The&nbsp;Chosen&nbsp;One'</code></td>
+						<td><code>c!call</code><br/>
+							<code>c!callforBattle</code><br/>
+							<code>c!callForBattle</code></td>
+					</tr>
+					<tr>
+						<td><code>c!dismiss [CHARACTER]</code></td>
+						<td><i>Dismisses a character from the active Party and restores their health back to their Max HP.</i> If the character isn't on the Roster, or was already summoned, throws an error.<br/></td>
+						<td><code>c!dismiss&nbsp;Courtney</code><br/>
+							<code>c!dismiss&nbsp;'The&nbsp;Chosen&nbsp;One'</code></td>
+						<td><i>None.</i></td>
+					</tr>
+					<tr>
+						<td><code>c!dismissAll</code></td>
+						<td><i>Dismisses everyone from the active Party and restores their health back to their Max HP.</i> If no one was summoned in the first place, throws an error.<br/></td>
+						<td><code>c!dismissAll</code></td>
+						<td><i>None.</i></td>
+					</tr>
+					<tr>
+						<td><code>c!set [CHARACTER] [NEW HP]</code></td>
+            <td><i>Set a character's current HP (doesn't need to have been summoned)</i> If the character isn't on the Roster, throws an error.<br/></td>
+						<td><code>c!set&nbsp;Courtney&nbsp;70</code>
+							  <code>c!set&nbsp;'The&nbsp;Chosen&nbsp;One'&nbsp;10000</code>
+							  <code>c!set&nbsp;Weakling&nbsp;-10</code></td>
+						<td><code>c!setHealth</code></td>
+					</tr>
+					<tr>
+						<td><code>c!setMax [CHARACTER] [MAX HP]</code></td>
+						<td><i>Change the Max (or Base) HP of a character on the Roster.</i> If the character isn't on the Roster, throws an error.<br/></td>
+						<td><code>c!setMax&nbsp;Courtney&nbsp;50</code><br/>
+							  <code>c!setMax&nbsp;'The&nbsp;Chosen&nbsp;One'&nbsp;50000</code></td>
+						<td><code>c!setMaxHealth</code></td>
+					</tr>
+					<tr>
+						<td><code>c!modify [CHARACTER] [CHANGE]</code></td>
+						<td><i>Modifies a character's HP by a certain amount (doesn't need to have been summoned)</i> If the character isn't on the Roster, throws an error.<br/></td>
+						<td><code>c!modify&nbsp;Lucky&nbsp;200</code><br/>
+							  <code>c!modify&nbsp;Unlucky&nbsp;-200</code><br/>
+							  <code>c!modify&nbsp;Meh&nbsp;0</code></td>
+						<td><code>c!modifyHealth</code><br/>
+								<code>c!mod</code><br/>
+								<code>c!modHealth</code></td>
+					</tr>
+					<tr>
+						<td><code>c!heal [CHARACTER] [HEALING]</code></td>
+						<td><i>Increases a character's HP by a certain amount (doesn't need to have been summoned)</i> If the character isn't on the Roster, throws an error.<br/></td>
+						<td><code>c!heal&nbsp;Lucky&nbsp;200</code><br/>
+							  <code>c!heal&nbsp;Unlucky&nbsp;-200</code><br/>
+							  <code>c!heal&nbsp;Meh&nbsp;0</code></td>
+						<td><code>c!give</code><br/>
+								<code>c!giveHealth</code><br/>
+								<code>c!addHealth</code></td>
+					</tr>
+					<tr>
+						<td><code>c!damage [CHARACTER] [DAMAGE]</code></td>
+						<td><i>Decreases a character's HP by a certain amount (doesn't need to have been summoned)</i> If the character isn't on the Roster, throws an error.<br/></td>
+						<td><code>c!damage&nbsp;Unlucky&nbsp;200</code><br/>
+							  <code>c!damage&nbsp;Lucky&nbsp;-200</code><br/>
+							  <code>c!damage&nbsp;Meh&nbsp;0</code></td>
+						<td><code>c!sub</code><br/>
+								<code>c!subHealth</code><br/>
+								<code>c!take</code><br/>
+								<code>c!takeHealth</code><br/>
+								<code>c!subtract</code><br/>
+								<code>c!subtractHealth</code></td>
+					</tr>
+          <tr>
+						<td><code>c!show [CHARACTER]</code></td>
+            <td><i>Shows the healthbar of a character (doesn't need to have been summoned)</i> If the character isn't on the Roster throws an error.<br/></td>
+						<td><code>c!show&nbsp;Courtney</code><br/>
+							  <code>c!show&nbsp;'The&nbsp;Chosen&nbsp;One'</code></td>
+						<td><code>c!showHealth</code><br/>
+							  <code>c!healthBar</code><br/>
+							  <code>c!bar</code></td>
+					</tr>
+          <tr>
+						<td><code>c!showAll</code></td>
+            <td><i>Shows the whole summoned party's healthbars.</i></td>
+						<td><code>c!showAll</code></td>
+						<td><code>c!showAllHealth</code><br/>
+							  <code>c!list</code><br/>
+							  <code>c!listHealth</code><br/>
+							  <code>c!partyHealth</code><br/>
+							  <code>c!showParty</code></td>
+					</tr>
+          <tr>
+						<td><code>c!roster</code></td>
+            <td><i>Shows the whole Roster's healthbars.</i></td>
+						<td><code>c!roster</code></td>
+						<td><code>c!showRoster</code><br/>
+                <code>c!listRoster</code></td>
+					</tr>
+          <tr>
+						<td><code>c!erase [CHARACTER]</code></td>
+            <td><i>Erases a character from the Roster.</i> If the character isn't on the Roster throws an error.<br/></td>
+						<td><code>c!erase&nbsp;Forsaken</code><br/>
+							  <code>c!erase&nbsp;'The&nbsp;Forsaken&nbsp;One'</code></td>
+						<td><code>c!delete</code><br/>
+							  <code>c!rachel</code></td>
+					</tr>
+          <tr>
+						<td><code>c!hyperdeath [NAME]</code></td>
+            <td><i>Destroys someone with an unfathomable amount of damage.</i> Doesn't actually do anything to your Party or Roster records. Just for fun.</td>
+						<td><code>c!hyperdeath&nbsp;Martyr</code><br/>
+							  <code>c!hyperdeath&nbsp;'Press&nbsp;F&nbsp;For&nbsp;Respects'</code></td>
+						<td><code>c!hyperkill</code></td>
+					</tr>
+          <tr>
+						<td><code>c!cfg [PROPERTY] [ARGUMENT/S]</code></td>
+            <td>Configurate the bot's preferences for your server. Sets the property <code>[PROPERTY]</code> to <code>[ARGUMENT/S]</code>.<br/>
+                <code>[PROPERTY]</code> is the name of the property or attribute you want to modify for your server. Use <code>bot</code> to change Courtney's name, <code>party</code> to change the name of your Party and Roster, and <code>DM</code> so that Courtney knows what your DM is called.<br/>
+                <code>[ARGUMENT/S]</code> is the value/values you want to change the Property or Attribute to. If you want to use spaces, surround the name by single quotes.
+            </td>
+						<td><code>c!cfg&nbsp;bot&nbsp;healthbot</code><br/>
+                <code>c!cfg party 'Party 2: Party Harderer'</code><br/>
+							  <code>c!cfg&nbsp;DM&nbsp;God</code></td>
+						<td><code>c!config</code></td>
+					</tr>
+          <tr>
+						<td><code>c!heartbeat</code></td>
+            <td>Doki doki.</td>
+						<td><code>c!heartbeat</code></td>
+						<td><i>None.</i></td>
+					</tr>
+          <tr>
+						<td><code>c!perp</code></td>
+            <td>Perp.</td>
+						<td><code>c!perp</code></td>
+						<td><i>None.</i></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+  <div class="footer">
+    <p>Bot and website by <a href="https://perpetuareality.github.io/">perpetuaReality</a>. Hosted by <a href="https://glitch.com/">Glitch</a>.</p>
+  </div>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>

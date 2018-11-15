@@ -1,2 +1,2 @@
 # Courtney
-A Discord bot for tracking character HPs
+This README is still under construction!

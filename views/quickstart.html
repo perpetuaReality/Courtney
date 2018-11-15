@@ -1,0 +1,59 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Courtney || Quickstart Guide</title>
+    <meta name="description" content="Courtney! An HP tracker bot for Discord. Keep track of your character's HP easily on your next D&D session!">
+    <link id="favicon" rel="icon" href="https://cdn.glitch.com/6c33b7d1-845a-40b8-a161-aa91ea03b579%2FICON.png?1538727260231" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="navbar">
+      <a href="/"><img src="https://cdn.glitch.com/6c33b7d1-845a-40b8-a161-aa91ea03b579%2FICON.png?1538727260231" class="icon" height="50" width="50"/><h2>Courtney</h2></a>
+      <div id="toggleBtn"><a href="javascript:void(0);" onclick="toggleMenu();"><span class="fas fa-bars" ></span></a></div>
+      <div id="menu">
+      <a href="/about">About</a>
+      <a href="/quickstart">Quickstart</a>
+      <a href="/commands">Commands</a>
+      <a href="/invite">Invite!</a>
+      </div>
+    </div>
+    <div class="title">
+      <h1>Quickstart Guide</h1>
+    </div>
+    <div class="cont_wrap">
+      <div class="content">
+        <h2>
+          So you have asked Courtney to help you?
+        </h2>
+        <p>Setting up your Courtney is really easy! First of all, you might like to name your party. For this, type "<code>c!cfg party </code>", followed by whatever you wanna call your party. If you wanna use space, please, enclose the name of the party between single quotes (<code>'</code>).</p>
+        <div class="image"><img class="image-border" src="https://cdn.discordapp.com/attachments/498739382266888222/507801382871367681/unknown.png"/></div>
+        <p>Now that Courtney knows what your party is called, let's get her to know your <i>Characters</i>! Courtney keeps track of every character she meets on the party's <i>Roster</i>. To add a new character to the Roster, you can use the <code>c!new</code> command, which takes your character's <b>name</b> and <b>base HP</b> as arguments.</p>
+        <div class="image"><img class="image-border" src="https://cdn.discordapp.com/attachments/498739382266888222/507803811684024321/unknown.png"/></div>
+        <p>Once Courtney has registered your character on the Roster, now they are ready for battle! Except... not quite. You can damage or heal them as is, but it's recommendable that you <code>c!summon</code> them! <b>Summoned</b> characters will appear on the <i>Active Party list</i>, which is different from the Roster (<b>every character</b> appears on the Roster, but only summoned ones do on the Active Party list.)</p>
+        <p>Later, if you want, you can desummon or <code>c!dismiss</code> them, which will heal them to full health! That's probably the best use for summoning and dismissing!</p>
+        <div class="image"><img class="image-border" src="https://cdn.discordapp.com/attachments/498739382266888222/507807914401071146/unknown.png"/></div>
+        <p>Now that Courtney is familiar with your characters, you can begin managing them in battle! You can either <code>c!damage</code> or <code>c!heal</code> them! When you do, Courtney will take note of the change to their HP and will show you their current health in a neat little healthbar.</p>
+        <p>We recommend your party chooses a designated user to manage Courtney during sessions, as she listens to anyone issuing commands to her, regardless of whether the characters where registered by the issuer of the command or not. This person would usually be your DM, but it's by no means necessary.</p>
+        <div class="image"><img class="image-border" src="https://cdn.discordapp.com/attachments/498739382266888222/506362893529382923/unknown.png"/></div>
+        <p>And that is basically it! If you want to know the full list of commands for Courtney, please head over to the <a href="https://courtney.glitch.me/commands">Command List page</a>!</p>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Bot and website by <a href="https://perpetuareality.github.io/">perpetuaReality</a>. Hosted by <a href="https://glitch.com/">Glitch</a>.</p>
+    </div>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
