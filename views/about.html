@@ -1,0 +1,132 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Courtney || About</title>
+    <meta name="description" content="Courtney! An HP tracker bot for Discord. Keep track of your character's HP easily on your next D&D session!">
+    <link id="favicon" rel="icon" href="https://cdn.glitch.com/6c33b7d1-845a-40b8-a161-aa91ea03b579%2FICON.png?1538727260231" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  </head>
+  <body onload="loadKeywords();">
+  <div id="navbar">
+    <a href="/"><img src="https://cdn.glitch.com/6c33b7d1-845a-40b8-a161-aa91ea03b579%2FICON.png?1538727260231" class="icon" height="50" width="50"/><h2>Courtney</h2></a>
+    <div id="toggleBtn"><a href="javascript:void(0);" onclick="toggleMenu();"><span class="fas fa-bars" ></span></a></div>
+    <div id="menu">
+      <a href="/about">About</a>
+      <a href="/quickstart">Quickstart</a>
+      <a href="/commands">Commands</a>
+      <a href="/invite">Invite!</a>
+    </div>
+  </div>
+	<div class="title">
+    <h1>About</h1>
+	</div>
+	<div class="cont_wrap">
+		<div class="content about">
+      <div class="cont_flex">
+        <div style="min-width: 50%; max-width: 600px;">
+          <h1>
+            Courtney
+          </h1>
+          <p>
+            is a little Discord bot that let's you keep track of your character's healthbars. For example, for when you play D&D or any other RPG systems with your friends!
+          </p>
+          <p>
+            Courtney let's you keep a backlog of characters whose HP levels you can modify on the fly and check at any time. She also allows you to visualize these with neat little text-based healthbars.
+          </p>
+        </div>
+        <div>
+          <img src="https://cdn.glitch.com/6c33b7d1-845a-40b8-a161-aa91ea03b579%2FPORTRAIT.png?1542147021136" height="400" width="400"/>
+        </div>
+      </div>
+      <div class="cont_flex">
+        <div style="max-width: 600px; text-align: center; margin: 30px;">
+          <h2>
+            That's pretty much it, really!
+          </h2>
+          <h4 style="margin-bottom: 0px;">
+            Kind of a one-trick pony, but she does her job perfectly!
+          </h4>
+          <i style="font-size: .8em;">
+            And if she doesn't, please, <a href="#contact">contact me!</a>
+          </i>
+        </div>
+      </div>
+      <div class="cont_flex">
+        <div>
+          <img class="image-border" src="https://cdn.glitch.com/6c33b7d1-845a-40b8-a161-aa91ea03b579%2Fhello%20courtney.gif?1542151319070"/>
+        </div>
+        <div style="min-width: 50%; max-width: 600px;">
+          <p>
+            Although, well, you can also interact somewhat with her with more than just commands! You can also say hello to her, wish her a goodnight, or tell her you love and appreciate her, if you so want!
+          </p>
+          <a id="key_list_toggle" href="javascript:void(0);" onclick="toggleKeywords();">Show keywords</a>
+          <table id="key_list" hidden>
+            <thead>
+              <tr>
+                <td>Hello, @Courtney!</td>
+                <td>I love you, @Courtney!</td>
+                <td>Goodnight, @Courtney!</td>
+                <td>Stan @Courtney.</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="key_list_note">
+                <td>(used anywhere on the message)</td>
+                <td>(used ONLY at the beginning of the message)</td>
+                <td>(used anywhere on the message)</td>
+                <td>(used anywhere on the message)</td>
+              </tr>
+              <tr id="key_list_fill">
+                <td id="key_list_hi"></td>
+                <td id="key_list_ilu"></td>
+                <td id="key_list_gn"></td>
+                <td id="key_list_stan"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="cont_flex" id="contact" style="text-align: center; font-size: larger; margin-top: 30px;">
+        <div>
+          A bot and website by
+          <h2 style="margin: 0;">
+            perpetuaReality
+          </h2>
+          <span style="font-size: medium; max-width: 300px;">Bot and website favicon, and original "Courtney" character design by <a href="https://twitter.com/cryptbaybie">Elliot Godfrey</a></span>
+        </div>
+        <div>
+          Here you can find me on social media!<br/>
+          <a class="social_media" href="https://perpetuareality.tumblr.com/">Regular <span class="fab fa-tumblr"></span></a> | 
+          <a class="social_media" href="https://perpetuallydrawing.tumblr.com/">Art <span class="fab fa-tumblr"></span></a> | 
+          <a class="fab fa-twitter social_media" href="https://www.twitter.com/perpetuaReality"></a> | 
+          <a class="fab fa-github social_media" href="https://github.com/perpetuaReality"></a> | 
+          <a class="fab fa-deviantart social_media" href="https://www.deviantart.com/recreoconts"></a> | 
+          <a class="fab fa-instagram social_media" href="https://www.instagram.com/perpetuareality"></a>
+        </div>
+      </div>
+      <div class="cont_flex">
+        <div style="max-width: 600px; text-align: center; margin: 30px;">
+          <a href="/invite" id="invite">Invite Courtney!</a>
+        </div>
+      </div>
+		</div>
+	</div>
+  <div class="footer">
+    <p>Bot and website by <a href="https://perpetuareality.github.io/">perpetuaReality</a>. Hosted by <a href="https://glitch.com/">Glitch</a>.</p>
+  </div>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>

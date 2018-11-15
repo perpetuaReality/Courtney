@@ -1,0 +1,20 @@
+{
+  "name": "courtney-hptracker",
+  "version": "0.0.1",
+  "description": "Take 285 damage. Do not pass GO. Do not collect $200.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.12.4",
+    "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+    "nedb": "*"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "nedb"
+  ],
+  "license": "MIT"
+}
