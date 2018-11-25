@@ -39,9 +39,6 @@ app.get("/about", function (request, response) {
 app.get("/quickstart", function (request, response) {
   response.sendFile(__dirname + '/views/quickstart.html');
 });
-app.get("/test", function (request, response) {
-  response.sendFile(__dirname + '/views/index_test.html');
-});
 app.get("/invite", function (request, response) {
   response.redirect('https://discordapp.com/oauth2/authorize?client_id=485569691910275083&scope=bot&permissions=2048.html');
 });
@@ -749,7 +746,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					break;
 					case 7: image = "https://vignette.wikia.nocookie.net/mspaintadventures-en-espanol/images/8/87/Homosuck_Vriska.png/revision/latest?cb=20141021155822&path-prefix=es"
 					break;
-					case 8: image = "https://static.tumblr.com/a948293cd5e5c6a20255b41c196ebbb9/z8nvfkx/ujPozmu57/tumblr_static_27m4xtnwzg4kwowwsg4o40888.png [[ credit tumblr user vriska ]]"
+					case 8: image = "https://static.tumblr.com/a948293cd5e5c6a20255b41c196ebbb9/z8nvfkx/ujPozmu57/tumblr_static_27m4xtnwzg4kwowwsg4o40888.png [[ credit tumblr user milkyol ]]"
 					break;
 					case 9: image = "http://www.mspaintadventures.com/storyfiles/hs2/04837.gif"
 					break;
@@ -772,3 +769,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 var listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
+
+app.use(function (req, res, next) {
+  res.status(404).sendFile(__dirname + '/views/404.html');
+})

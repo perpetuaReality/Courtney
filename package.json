@@ -1,6 +1,6 @@
 {
   "name": "courtney-hptracker",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "Take 285 damage. Do not pass GO. Do not collect $200.",
   "main": "server.js",
   "scripts": {
