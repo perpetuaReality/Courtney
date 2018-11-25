@@ -39,9 +39,6 @@ app.get("/about", function (request, response) {
 app.get("/quickstart", function (request, response) {
   response.sendFile(__dirname + '/views/quickstart.html');
 });
-app.get("/test", function (request, response) {
-  response.sendFile(__dirname + '/views/index_test.html');
-});
 app.get("/invite", function (request, response) {
   response.redirect('https://discordapp.com/oauth2/authorize?client_id=485569691910275083&scope=bot&permissions=2048.html');
 });
@@ -772,3 +769,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 var listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
+
+app.use(function (req, res, next) {
+  res.status(404).sendFile(__dirname + '/views/404.html');
+})
