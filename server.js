@@ -749,7 +749,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 					break;
 					case 7: image = "https://vignette.wikia.nocookie.net/mspaintadventures-en-espanol/images/8/87/Homosuck_Vriska.png/revision/latest?cb=20141021155822&path-prefix=es"
 					break;
-					case 8: image = "https://static.tumblr.com/a948293cd5e5c6a20255b41c196ebbb9/z8nvfkx/ujPozmu57/tumblr_static_27m4xtnwzg4kwowwsg4o40888.png [[ credit tumblr user vriska ]]"
+					case 8: image = "https://static.tumblr.com/a948293cd5e5c6a20255b41c196ebbb9/z8nvfkx/ujPozmu57/tumblr_static_27m4xtnwzg4kwowwsg4o40888.png [[ credit tumblr user milkyol ]]"
 					break;
 					case 9: image = "http://www.mspaintadventures.com/storyfiles/hs2/04837.gif"
 					break;
