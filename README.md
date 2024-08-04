@@ -1,3 +1,6 @@
 # Courtney
-Courtney is a Discord bot capable of tracking your characters' HP levels in, say, an RP environment. Learn more on https://courtney.glitch.me/about!
-All coding help and suggestions are appreciated!
+This repository has been archived!
+
+Courtney has been remade from the ground to version 2, and her code is now closed-source.
+
+May reopen her codebase in the future.
